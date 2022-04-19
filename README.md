@@ -1,2 +1,2 @@
 # Intel-System
-![alt text](IS a1.png)
+![alt text](/IS a1.png)
