@@ -1,2 +1,2 @@
 # Intel-System
-![alt text](/IS a1.png)
+![Getting Started](flowchart.PNG)
