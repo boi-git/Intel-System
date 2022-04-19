@@ -1,14 +1,21 @@
-a =  [4,1,2,5,3]
+# Using a Python dictionary to act as an adjacency list
+graph = {
+    'A' : ['B','C'],
+    'B' : ['D', 'E'],
+    'C' : ['F'],
+    'D' : [],
+    'E' : ['F'],
+    'F' : []
+}
 
-def childNodes(i):
-     return (2*i)+1, (2*i)+2
+visited = set() # Set to keep track of visited nodes.
 
-def traversed(a, i=0, d = 0):
-    if i >= len(a):
-        return 
-    l, r =  childNodes(i)
-    traversed(a, r, d = d+1)
-    print("   "*d + str(a[i]))
-    traversed(a, l, d = d+1)
+def dfs(visited, graph, node):
+    if node not in visited:
+        print (node)
+        visited.add(node)
+        for neighbour in graph[node]:
+            dfs(visited, graph, neighbour)
 
-traversed(a)
+# Driver Code
+dfs(visited, graph, 'A')
