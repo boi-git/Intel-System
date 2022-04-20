@@ -1,4 +1,3 @@
-from pickle import FALSE
 import  numpy as np
 
 quest1 = np.array([4,1,2,5,3])
@@ -18,8 +17,11 @@ def l_r(move,choice):
 i = False
 while i ==False :
     print(quest1)
+    print("select the value 1~5")
     x = int(input()) - 1
+    print("Maneuver l or r")
     movement = input()
     l_r(x,movement)
     i=np.array_equal(quest1,answer)
 
+print(quest1)
